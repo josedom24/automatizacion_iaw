@@ -4,3 +4,11 @@
   tasks:
     - name: Ensure system is upgraded (It can take a long time)
       apt: upgrade=yes update_cache=yes
+
+    - name: Ensure /etc/hosts is properly defined
+      copy: >-
+        src=etc/hosts
+        dest=/etc/hosts
+        owner=root
+        group=root
+        mode=0644
