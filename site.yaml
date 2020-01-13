@@ -2,3 +2,8 @@
   become: true
   roles:
    - role: commons
+
+- hosts: servidores_web
+  become: true
+  roles:
+   - role: apache2
