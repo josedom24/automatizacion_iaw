@@ -1,7 +1,8 @@
-- name: ensure mariadb and rsync are installed
+- name: ensure mariadb is installed
   apt:
     pkg:
       - mariadb-server
+      - python-mysqldb
     state: latest
 - name: ensure mariadb binds to internal interface
   template: >-
