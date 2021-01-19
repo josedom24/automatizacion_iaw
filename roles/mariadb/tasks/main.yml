@@ -2,7 +2,7 @@
   apt:
     pkg:
       - mariadb-server
-      - python-mysqldb
+      - python3-mysqldb
     state: latest
 - name: ensure mariadb binds to internal interface
   template: >-
